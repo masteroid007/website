@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  position: relative;
+  height: fit-content;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  padding: 30px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-vid {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .back-vid {
+      width: auto;
+      height: 100%;
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .back-vid {
+      width: 100%;
+      height: auto;
+  }
+}
+
+.main-section {
+  width: 90%;
+  height: 90%;
+  background-color: #4ad0ee1b;
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  box-shadow: 5px 5px 20px 1px #4acfee;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+}
+
+nav h1 {
+  color: white;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.2s;
+  padding: 0px 25px;
+}
+
+nav a:hover,
+.attivo {
+  color: #4acfee;
+  text-decoration: underline;
+}
+
+.hero {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  box-shadow: 5px 5px 20px 1px #0a3aa3;
+  width: 60%;
+  margin: 20px auto;
+  padding: 20px;
+  height: 83%;
+}
+
+.hero h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+.hero p {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  line-height: 1.5;
+  color: #f4f4f4;
+  padding: 15px;
+}
+
+.social-icons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #4acfee;
+  font-size: 30px;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #53f8c9;
+  text-shadow: 0 0 10px #4acfee;
+}
+
+@media (max-width: 980px) {
+  body {
+      height: fit-content;
+      overflow: auto;
+  }
+
+  .main-section nav ul {
+      display: none;
+  }
+
+  .hero {
+      width: 90%;
+  }
+}
+
+@media (max-width: 440px) {
+  .hero h1 {
+      font-size: 40px;
+  }
+
+  .profile-img img {
+      width: 100px;
+      height: 100px;
+  }
+}
